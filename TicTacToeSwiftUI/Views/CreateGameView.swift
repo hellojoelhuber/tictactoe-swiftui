@@ -10,6 +10,13 @@ import SwiftUI
 struct CreateGameView: View {
     @EnvironmentObject var auth: Auth
     @EnvironmentObject var gameVM: GameViewModel
+//    @Environment(\.dismiss) var dismiss
+    
+//    var DismissButton: some View {
+//        Button("Dismiss") {
+//            dismiss()
+//        }
+//    }
     
     @State var rows: Int = 3
     @State var columns: Int = 3

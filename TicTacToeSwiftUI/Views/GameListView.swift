@@ -8,9 +8,6 @@
 import SwiftUI
 import TicTacToeCore
 
-#warning("TODO: Read over some SwiftUI best practices, cool solutions that I can implement")
-#warning("TODO: Create a watchOS app to play the game on my watch.")
-
 struct GameListView: View {
     @EnvironmentObject var gameVM: GameViewModel
     @EnvironmentObject var auth: Auth
