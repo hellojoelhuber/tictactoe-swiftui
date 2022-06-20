@@ -1,0 +1,7 @@
+*.xcuserstate project.xcworkspace/
+xcuserdata/
+*.xcuserdatad
+*/build/*
+.DS_Store
+*.xcuserstate
+*xcuserdata/joelhuber.xcuserdatad/UserInterfaceState.xcuserstate
