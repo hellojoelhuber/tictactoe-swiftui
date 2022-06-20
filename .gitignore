@@ -5,3 +5,5 @@ xcuserdata/
 .DS_Store
 *.xcuserstate
 *xcuserdata/joelhuber.xcuserdatad/UserInterfaceState.xcuserstate
+/.DS_Store
+/TicTacToeSwiftUI.xcodeproj/project.xcworkspace/xcuserdata/joelhuber.xcuserdatad/UserInterfaceState.xcuserstate
