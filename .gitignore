@@ -1,11 +1,10 @@
-*.xcuserstate project.xcworkspace/
 xcuserdata/
-*.xcuserdatad
+*.xcuserstate
+
 */build/*
 .DS_Store
-*.xcuserstate
-*xcuserdata/joelhuber.xcuserdatad/UserInterfaceState.xcuserstate
-*xcuserdata/joelhuber.xcuserdatad/xcschemes
 /.DS_Store
+
 /TicTacToeSwiftUI.xcodeproj/project.xcworkspace/xcuserdata/joelhuber.xcuserdatad/UserInterfaceState.xcuserstate
+
 /Preview Content/*
