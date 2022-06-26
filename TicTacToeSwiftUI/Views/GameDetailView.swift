@@ -19,14 +19,15 @@ struct GameDetailView: View {
         case .idle:
             Color.clear.onAppear(perform: {gameVM.loadGame(auth: auth)})
         case .loading:
-            GameBoardView
-//            ProgressView()
+            ProgressView()
         case .failed(_):
             VStack { Text("Error occurred.")}
 //            ErrorView(error: error, retryHandler: gameVM.load)
         case .loaded:
             VStack {
-                GameBoardView
+                GameBoardView(boardSquares: gameVM.gameBoard,
+                              columns: gameVM.game.boardColumns,
+                              tappedSquare: $tappedSquare)
                     .onAppear {
                         updateBoard()
                     }
@@ -55,17 +56,6 @@ struct GameDetailView: View {
         }
     }
     
-    var GameBoardView: some View {
-        AspectVGrid(items: gameVM.gameBoard, aspectRatio: 1, columns: gameVM.game.boardColumns, content: { square in
-            SquareView(square: square)
-                .background(RoundedRectangle(cornerRadius: 4.0)
-                    .stroke(square.id == tappedSquare ? .red : .blue, lineWidth: 2))
-                .onTapGesture {
-                    tappedSquare = square.id
-                }
-        })
-    }
-    
     var SubmitMove: some View {
         Button("Submit Move") {
             DispatchQueue.main.async {
@@ -87,3 +77,42 @@ struct GameDetailView: View {
         }
     }
 }
+
+// GameDetailViewModel requires authenticated networking request. Consider workarounds to preview View.
+
+//struct GameDetailView_Previews: PreviewProvider {
+//    struct Preview: View {
+//        static let player1 = PlayerDTO(id: UUID.init(),
+//                                       username: "alpha",
+//                                       profileIcon: "hare")
+//        static let player2 = PlayerDTO(id: UUID.init(),
+//                                       username: "beta",
+//                                       profileIcon: "hare")
+//        static let game = GameDTO(id: UUID.init(),
+//                                  boardRows: 3,
+//                                  boardColumns: 3,
+//                                  isPasswordProtected: false,
+//                                  isMutualFollowsOnly: false,
+//                                  playerCount: 2,
+//                                  openSeats: 0,
+//                                  completeTurnsCount: 0,
+//                                  nextTurn: nil,
+//                                  isComplete: false,
+//                                  winner: nil,
+//                                  createdBy: player1,
+//                                  createdAt: Date.now,
+//                                  updatedAt: Date.now,
+//                                  players: [player1, player2])
+//        static let gameVM = GameDetailViewModel(game: game)
+//
+//        var body: some View {
+//            GameDetailView(gameVM: GameDetailView_Previews.Preview.gameVM)
+//        }
+//    }
+//
+//    static var previews: some View {
+//        Preview()
+//    }
+//}
+
+

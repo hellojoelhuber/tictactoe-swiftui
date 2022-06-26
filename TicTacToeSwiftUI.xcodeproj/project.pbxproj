@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		74461D9A2868A17C00117261 /* GameBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74461D992868A17C00117261 /* GameBoardView.swift */; };
+		74461D9C2868ACD200117261 /* ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74461D9B2868ACD200117261 /* ViewState.swift */; };
 		74E7560A2846E82C0025B9A7 /* TicTacToeSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E756092846E82C0025B9A7 /* TicTacToeSwiftUIApp.swift */; };
 		74E7560E2846E82C0025B9A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74E7560D2846E82C0025B9A7 /* Assets.xcassets */; };
 		74E756112846E82C0025B9A7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74E756102846E82C0025B9A7 /* Preview Assets.xcassets */; };
@@ -44,6 +46,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		74461D992868A17C00117261 /* GameBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameBoardView.swift; sourceTree = "<group>"; };
+		74461D9B2868ACD200117261 /* ViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewState.swift; sourceTree = "<group>"; };
 		74E756062846E82C0025B9A7 /* TicTacToeSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TicTacToeSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74E756092846E82C0025B9A7 /* TicTacToeSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeSwiftUIApp.swift; sourceTree = "<group>"; };
 		74E7560D2846E82C0025B9A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -167,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				74E756332846E8EC0025B9A7 /* GameViewModel.swift */,
+				74461D9B2868ACD200117261 /* ViewState.swift */,
 				74E7563F284806D00025B9A7 /* GameDetailViewModel.swift */,
 			);
 			path = ViewModels;
@@ -180,6 +185,7 @@
 				74E756352846E8F40025B9A7 /* GameListView.swift */,
 				74E756372846E8FA0025B9A7 /* GameDetailView.swift */,
 				74E75645284826BD0025B9A7 /* CreateGameView.swift */,
+				74461D992868A17C00117261 /* GameBoardView.swift */,
 				74E7564D284A91880025B9A7 /* SquareView.swift */,
 			);
 			path = Views;
@@ -297,6 +303,7 @@
 				74E75652284A92010025B9A7 /* Square.swift in Sources */,
 				74E75646284826BD0025B9A7 /* CreateGameView.swift in Sources */,
 				74E75642284822FB0025B9A7 /* GameSettings.swift in Sources */,
+				74461D9A2868A17C00117261 /* GameBoardView.swift in Sources */,
 				74E7564E284A91880025B9A7 /* SquareView.swift in Sources */,
 				74E7562E2846E8810025B9A7 /* TokenAuth.swift in Sources */,
 				74E7563C2846E96D0025B9A7 /* ResourceRequest.swift in Sources */,
@@ -305,6 +312,7 @@
 				74E7564C284A61DD0025B9A7 /* AspectVGrid.swift in Sources */,
 				74E7563E2846E9940025B9A7 /* ResourceRequestError.swift in Sources */,
 				74E7564A28493DF30025B9A7 /* ProfileView.swift in Sources */,
+				74461D9C2868ACD200117261 /* ViewState.swift in Sources */,
 				74E75650284A91DB0025B9A7 /* Piece.swift in Sources */,
 				74E756382846E8FA0025B9A7 /* GameDetailView.swift in Sources */,
 				74E756342846E8EC0025B9A7 /* GameViewModel.swift in Sources */,

@@ -76,11 +76,33 @@ struct GameListView: View {
 }
 
 //struct ContentView_Previews: PreviewProvider {
-//    @StateObject var gameVM = GameViewModel()
-//    @StateObject var auth = Auth()
+//    struct Preview: View {
+//        @StateObject var gameVM = GameViewModel()
+//        @StateObject var auth = Auth()
+//        let username = "admin"
+//        let password = "password"
+//        
+//        var body: some View {
+//            GameListView()
+//                .onAppear {
+//                    auth.login(username: username, password: password) { result in
+//                        switch result {
+//                        case .success:
+//                            break
+//                        case .failure:
+//                            DispatchQueue.main.async {
+//                                self.showingLoginErrorAlert = true
+//                            }
+//                        }
+//                    }
+//                }
+//                .environmentObject(gameVM)
+//                .environmentObject(auth)
+//        }
+//    }
+//    
 //
 //    static var previews: some View {
-//        GameListView(gameVM: gameVM, auth: auth)
-//            .onAppear(perform: GameListView.login())
+//        Preview()
 //    }
 //}

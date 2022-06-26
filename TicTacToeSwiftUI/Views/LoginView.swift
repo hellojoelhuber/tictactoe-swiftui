@@ -8,17 +8,13 @@
 import SwiftUI
 
 struct LoginView: View {
-    @State var username = "scarletwitch"
-    @State var password = "darkhold"
+    @State var username = ""
+    @State var password = ""
     @State private var showingLoginErrorAlert = false
     @EnvironmentObject var auth: Auth
     
     var body: some View {
         VStack {
-//            Image("logo")
-//                .aspectRatio(contentMode: .fit)
-//                .padding(.leading, 75)
-//                .padding(.trailing, 75)
             Text("Log In")
                 .font(.largeTitle)
             TextField("Username", text: $username)

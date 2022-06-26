@@ -27,5 +27,19 @@ struct SquareView: View {
         static let padding: CGFloat = 8
 //        static let edgeInsets: CGFloat = 1
     }
-    
+}
+
+struct SquareView_Previews: PreviewProvider {
+    struct Preview: View {
+        let square = Square(id: 0, piece: Piece(id: 0, type: .home))
+        
+        var body: some View {
+            SquareView(square: square)
+                .frame(width: 100, height: 100)
+        }
+    }
+
+    static var previews: some View {
+        Preview()
+    }
 }
