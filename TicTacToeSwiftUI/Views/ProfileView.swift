@@ -24,17 +24,15 @@ struct ProfileView: View {
     
     var body: some View {
         VStack {
+            Spacer()
+            
             Text("\(player!.username)")
                 .font(.largeTitle)
             Image(systemName: player!.profileIcon)
             Text("Played: \(player!.gamesPlayed)")
             Text("Won: \(player!.gamesWon)")
-            Button("Tap") {
-                if self.player != nil {
-                    print(self.player!.id)
-                    print(self.player!.username)
-                }
-            }
+            
+            Spacer()
         }
     }
 }

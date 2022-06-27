@@ -15,6 +15,8 @@ struct LoginView: View {
     
     var body: some View {
         VStack {
+            LogoPlaceholder()
+            
             Text("Log In")
                 .font(.largeTitle)
             TextField("Username", text: $username)
@@ -33,10 +35,13 @@ struct LoginView: View {
             }
             .frame(width: 120.0, height: 60.0)
             .disabled(username.isEmpty || password.isEmpty)
+            
+            Spacer(minLength: 100)
         }
         .alert(isPresented: $showingLoginErrorAlert) {
             Alert(title: Text("Error"), message: Text("Could not log in. Check your credentials and try again"))
         }
+        .padding()
     }
     
     func login() {

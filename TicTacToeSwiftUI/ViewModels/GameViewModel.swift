@@ -8,8 +8,17 @@
 import SwiftUI
 import TicTacToeCore
 
+enum Page {
+    case landingPage
+    case activeGames
+    case localGames
+    case searchGames
+    case profile
+}
+
 class GameViewModel: ObservableObject {
     @Published private(set) var state = ViewState.idle
+    @Published var currentPage: Page = .landingPage
     
 //    private var player: Player? = nil // TODO: This needs to be more readily accessible.
     @Published var games: [GameDTO]

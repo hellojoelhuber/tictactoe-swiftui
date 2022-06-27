@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		74461D9A2868A17C00117261 /* GameBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74461D992868A17C00117261 /* GameBoardView.swift */; };
 		74461D9C2868ACD200117261 /* ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74461D9B2868ACD200117261 /* ViewState.swift */; };
+		74461DBC286A1A9400117261 /* LandingPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74461DBB286A1A9400117261 /* LandingPageView.swift */; };
+		74461DBE286A25C800117261 /* LogoPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74461DBD286A25C800117261 /* LogoPlaceholder.swift */; };
+		74461DC0286A2BFF00117261 /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74461DBF286A2BFF00117261 /* ViewRouter.swift */; };
+		74461DC2286A2DCB00117261 /* TabBarIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74461DC1286A2DCB00117261 /* TabBarIcon.swift */; };
 		74E7560A2846E82C0025B9A7 /* TicTacToeSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E756092846E82C0025B9A7 /* TicTacToeSwiftUIApp.swift */; };
 		74E7560E2846E82C0025B9A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74E7560D2846E82C0025B9A7 /* Assets.xcassets */; };
 		74E756112846E82C0025B9A7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74E756102846E82C0025B9A7 /* Preview Assets.xcassets */; };
@@ -48,6 +52,10 @@
 /* Begin PBXFileReference section */
 		74461D992868A17C00117261 /* GameBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameBoardView.swift; sourceTree = "<group>"; };
 		74461D9B2868ACD200117261 /* ViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewState.swift; sourceTree = "<group>"; };
+		74461DBB286A1A9400117261 /* LandingPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPageView.swift; sourceTree = "<group>"; };
+		74461DBD286A25C800117261 /* LogoPlaceholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoPlaceholder.swift; sourceTree = "<group>"; };
+		74461DBF286A2BFF00117261 /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
+		74461DC1286A2DCB00117261 /* TabBarIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarIcon.swift; sourceTree = "<group>"; };
 		74E756062846E82C0025B9A7 /* TicTacToeSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TicTacToeSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74E756092846E82C0025B9A7 /* TicTacToeSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeSwiftUIApp.swift; sourceTree = "<group>"; };
 		74E7560D2846E82C0025B9A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -181,6 +189,10 @@
 			isa = PBXGroup;
 			children = (
 				74E756472849399F0025B9A7 /* LoginView.swift */,
+				74461DBF286A2BFF00117261 /* ViewRouter.swift */,
+				74461DBB286A1A9400117261 /* LandingPageView.swift */,
+				74461DC1286A2DCB00117261 /* TabBarIcon.swift */,
+				74461DBD286A25C800117261 /* LogoPlaceholder.swift */,
 				74E7564928493DF30025B9A7 /* ProfileView.swift */,
 				74E756352846E8F40025B9A7 /* GameListView.swift */,
 				74E756372846E8FA0025B9A7 /* GameDetailView.swift */,
@@ -298,6 +310,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74461DC0286A2BFF00117261 /* ViewRouter.swift in Sources */,
 				74E756322846E8BC0025B9A7 /* GameRequest.swift in Sources */,
 				74E75640284806D00025B9A7 /* GameDetailViewModel.swift in Sources */,
 				74E75652284A92010025B9A7 /* Square.swift in Sources */,
@@ -305,6 +318,7 @@
 				74E75642284822FB0025B9A7 /* GameSettings.swift in Sources */,
 				74461D9A2868A17C00117261 /* GameBoardView.swift in Sources */,
 				74E7564E284A91880025B9A7 /* SquareView.swift in Sources */,
+				74461DBC286A1A9400117261 /* LandingPageView.swift in Sources */,
 				74E7562E2846E8810025B9A7 /* TokenAuth.swift in Sources */,
 				74E7563C2846E96D0025B9A7 /* ResourceRequest.swift in Sources */,
 				74E756302846E8AD0025B9A7 /* Authentication.swift in Sources */,
@@ -312,11 +326,13 @@
 				74E7564C284A61DD0025B9A7 /* AspectVGrid.swift in Sources */,
 				74E7563E2846E9940025B9A7 /* ResourceRequestError.swift in Sources */,
 				74E7564A28493DF30025B9A7 /* ProfileView.swift in Sources */,
+				74461DC2286A2DCB00117261 /* TabBarIcon.swift in Sources */,
 				74461D9C2868ACD200117261 /* ViewState.swift in Sources */,
 				74E75650284A91DB0025B9A7 /* Piece.swift in Sources */,
 				74E756382846E8FA0025B9A7 /* GameDetailView.swift in Sources */,
 				74E756342846E8EC0025B9A7 /* GameViewModel.swift in Sources */,
 				74E75654284ABB570025B9A7 /* PlayerRequest.swift in Sources */,
+				74461DBE286A25C800117261 /* LogoPlaceholder.swift in Sources */,
 				74E7560A2846E82C0025B9A7 /* TicTacToeSwiftUIApp.swift in Sources */,
 				74E756482849399F0025B9A7 /* LoginView.swift in Sources */,
 				74E756362846E8F40025B9A7 /* GameListView.swift in Sources */,

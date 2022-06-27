@@ -15,14 +15,9 @@ struct TicTacToeSwiftUIApp: App {
     var body: some Scene {
         WindowGroup {
             if auth.isLoggedIn {
-                TabView {
-                    GameListView()
-                        .tabItem { Label("Games", systemImage: "die.face.3") }
-                    ProfileView()
-                        .tabItem { Label("Profile", systemImage: "person") }
-                }
-                .environmentObject(auth)
-                .environmentObject(gameVM)
+                ViewRouter()
+                    .environmentObject(auth)
+                    .environmentObject(gameVM)
             } else {
                 LoginView()
                     .environmentObject(auth)
