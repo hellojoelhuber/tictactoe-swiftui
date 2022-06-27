@@ -30,32 +30,42 @@ struct LandingPageView: View {
     }
     
     var ActiveGames: some View {
-        SimpleButton(buttonLabel: "Active Games",
-                     backgroundColor: DrawingConstants.activeGamesButtonColor,
-                     icon: Page.activeGames.iconName)
-        .onTapGesture {
+        Button {
             gameVM.currentPage = .activeGames
+        } label: {
+            SimpleButton(buttonLabel: "Active Games",
+                         backgroundColor: DrawingConstants.activeGamesButtonColor,
+                         icon: Page.activeGames.iconName)
         }
     }
     
     var SearchForGames: some View {
-        SimpleButton(buttonLabel: "Search for Games",
-                     backgroundColor: DrawingConstants.searchGamesButtonColor,
-                     icon: Page.searchGames.iconName)
+        Button {
+            gameVM.currentPage = .searchGames
+        } label: {
+            SimpleButton(buttonLabel: "Search for Games",
+                         backgroundColor: DrawingConstants.searchGamesButtonColor,
+                         icon: Page.searchGames.iconName)
+        }
     }
     
     var PlayLocalGame: some View {
-        SimpleButton(buttonLabel: "Play Local Game",
-                     backgroundColor: DrawingConstants.localGamesButtonColor,
-                     icon: Page.localGames.iconName)
+        Button {
+            gameVM.currentPage = .localGames
+        } label: {
+            SimpleButton(buttonLabel: "Play Local Game",
+                         backgroundColor: DrawingConstants.localGamesButtonColor,
+                         icon: Page.localGames.iconName)
+        }
     }
     
     var ViewMyProfile: some View {
-        SimpleButton(buttonLabel: "My Profile",
-                     backgroundColor: DrawingConstants.profileButtonColor,
-                     icon: Page.profile.iconName)
-        .onTapGesture {
+        Button {
             gameVM.currentPage = .profile
+        } label: {
+            SimpleButton(buttonLabel: "My Profile",
+                         backgroundColor: DrawingConstants.profileButtonColor,
+                         icon: Page.profile.iconName)
         }
     }
     
