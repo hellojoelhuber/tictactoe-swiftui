@@ -32,7 +32,7 @@ struct LandingPageView: View {
     var ActiveGames: some View {
         SimpleButton(buttonLabel: "Active Games",
                      backgroundColor: DrawingConstants.activeGamesButtonColor,
-                     icon: ButtonIcons.active)
+                     icon: Page.activeGames.iconName)
         .onTapGesture {
             gameVM.currentPage = .activeGames
         }
@@ -41,19 +41,19 @@ struct LandingPageView: View {
     var SearchForGames: some View {
         SimpleButton(buttonLabel: "Search for Games",
                      backgroundColor: DrawingConstants.searchGamesButtonColor,
-                     icon: ButtonIcons.search)
+                     icon: Page.searchGames.iconName)
     }
     
     var PlayLocalGame: some View {
         SimpleButton(buttonLabel: "Play Local Game",
                      backgroundColor: DrawingConstants.localGamesButtonColor,
-                     icon: ButtonIcons.local)
+                     icon: Page.localGames.iconName)
     }
     
     var ViewMyProfile: some View {
         SimpleButton(buttonLabel: "My Profile",
                      backgroundColor: DrawingConstants.profileButtonColor,
-                     icon: ButtonIcons.profile)
+                     icon: Page.profile.iconName)
         .onTapGesture {
             gameVM.currentPage = .profile
         }
@@ -98,15 +98,6 @@ struct LandingPageView: View {
         static let localGamesButtonColor = Color.orange
         static let profileButtonColor = Color.yellow
     }
-}
-
-
-struct ButtonIcons {
-    static let landingPage = "house"
-    static let active = "gamecontroller"
-    static let search = "magnifyingglass.circle"
-    static let local = "checkerboard.rectangle"
-    static let profile = "person.circle"
 }
 
 struct LandingPageView_Previews: PreviewProvider {

@@ -26,19 +26,21 @@ struct ViewRouter: View {
             Spacer()
             
             HStack(spacing: 30) {
-                TabBarIcon(icon: ButtonIcons.landingPage, tabName: "Home", view: .landingPage)
+                TabBarIcon(icon: Page.landingPage.iconName,
+                           tabName: "Home",
+                           view: .landingPage)
                 
-                TabBarIcon(icon: ButtonIcons.active, tabName: "Active", view: .activeGames)
+                TabBarIcon(icon: Page.activeGames.iconName, tabName: "Active", view: .activeGames)
                 
-                TabBarIcon(icon: ButtonIcons.search, tabName: "Search", view: .searchGames)
+                TabBarIcon(icon: Page.searchGames.iconName, tabName: "Search", view: .searchGames)
                     .disabled(true)
                     .opacity(0.3)
                 
-                TabBarIcon(icon: ButtonIcons.local, tabName: "Local", view: .localGames)
+                TabBarIcon(icon: Page.localGames.iconName, tabName: "Local", view: .localGames)
                     .disabled(true)
                     .opacity(0.3)
                 
-                TabBarIcon(icon: ButtonIcons.profile, tabName: "Profile", view: .profile)
+                TabBarIcon(icon: Page.profile.iconName, tabName: "Profile", view: .profile)
             }
             .opacity(gameVM.currentPage == .landingPage ? 0 : 1)
             .padding()

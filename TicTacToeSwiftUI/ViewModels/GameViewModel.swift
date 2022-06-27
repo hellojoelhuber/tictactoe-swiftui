@@ -14,6 +14,16 @@ enum Page {
     case localGames
     case searchGames
     case profile
+    
+    var iconName: String {
+        switch (self) {
+        case .landingPage:  return "house"
+        case .activeGames:  return "gamecontroller"
+        case .searchGames:  return "magnifyingglass.circle"
+        case .localGames:   return "checkerboard.rectangle"
+        case .profile:      return "person.circle"
+        }
+    }
 }
 
 class GameViewModel: ObservableObject {
