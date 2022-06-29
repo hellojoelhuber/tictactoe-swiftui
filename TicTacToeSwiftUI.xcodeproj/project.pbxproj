@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		74364A27286CE6730082317F /* TrapezoidShapes in Frameworks */ = {isa = PBXBuildFile; productRef = 74364A26286CE6730082317F /* TrapezoidShapes */; };
 		74461D9A2868A17C00117261 /* GameBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74461D992868A17C00117261 /* GameBoardView.swift */; };
 		74461D9C2868ACD200117261 /* ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74461D9B2868ACD200117261 /* ViewState.swift */; };
 		74461DBC286A1A9400117261 /* LandingPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74461DBB286A1A9400117261 /* LandingPageView.swift */; };
@@ -89,6 +90,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				74FC678C284D0F570052AA47 /* TicTacToeCore in Frameworks */,
+				74364A27286CE6730082317F /* TrapezoidShapes in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,6 +223,7 @@
 			name = TicTacToeSwiftUI;
 			packageProductDependencies = (
 				74FC678B284D0F570052AA47 /* TicTacToeCore */,
+				74364A26286CE6730082317F /* TrapezoidShapes */,
 			);
 			productName = TicTacToeSwiftUI;
 			productReference = 74E756062846E82C0025B9A7 /* TicTacToeSwiftUI.app */;
@@ -275,6 +278,7 @@
 			mainGroup = 74E755FD2846E82C0025B9A7;
 			packageReferences = (
 				74FC678A284D0F570052AA47 /* XCRemoteSwiftPackageReference "TicTacToe-Core" */,
+				74364A25286CE6730082317F /* XCRemoteSwiftPackageReference "swift-trapezoid-shapes" */,
 			);
 			productRefGroup = 74E756072846E82C0025B9A7 /* Products */;
 			projectDirPath = "";
@@ -612,6 +616,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		74364A25286CE6730082317F /* XCRemoteSwiftPackageReference "swift-trapezoid-shapes" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hellojoelhuber/swift-trapezoid-shapes";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 		74FC678A284D0F570052AA47 /* XCRemoteSwiftPackageReference "TicTacToe-Core" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "file:///Users/joelhuber/vapor/TicTacToe-Core";
@@ -623,6 +635,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		74364A26286CE6730082317F /* TrapezoidShapes */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 74364A25286CE6730082317F /* XCRemoteSwiftPackageReference "swift-trapezoid-shapes" */;
+			productName = TrapezoidShapes;
+		};
 		74FC678B284D0F570052AA47 /* TicTacToeCore */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 74FC678A284D0F570052AA47 /* XCRemoteSwiftPackageReference "TicTacToe-Core" */;

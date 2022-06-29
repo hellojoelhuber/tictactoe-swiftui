@@ -76,6 +76,7 @@ struct LandingPageView: View {
         
         var body: some View {
             ZStack {
+                
                 RoundedRectangle(cornerRadius: DrawingConstants.buttonCornerRadius)
                     .foregroundColor(backgroundColor.opacity(0.5))
                 RoundedRectangle(cornerRadius: DrawingConstants.buttonCornerRadius)

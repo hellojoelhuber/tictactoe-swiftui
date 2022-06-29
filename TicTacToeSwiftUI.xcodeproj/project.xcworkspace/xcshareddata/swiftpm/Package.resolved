@@ -1,6 +1,15 @@
 {
   "pins" : [
     {
+      "identity" : "swift-trapezoid-shapes",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/hellojoelhuber/swift-trapezoid-shapes",
+      "state" : {
+        "revision" : "108fdb0a6bcb881f11c981fe9ceea9173c31772d",
+        "version" : "1.0.2"
+      }
+    },
+    {
       "identity" : "tictactoe-core",
       "kind" : "localSourceControl",
       "location" : "/Users/joelhuber/vapor/TicTacToe-Core",

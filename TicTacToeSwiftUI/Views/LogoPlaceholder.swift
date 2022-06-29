@@ -6,12 +6,16 @@
 //
 
 import SwiftUI
+import TrapezoidShapes
 
 struct LogoPlaceholder: View {
     var body: some View {
         ZStack {
-            RoundedRectangle(cornerRadius: 10)
+            RoundedTrapezoid(cornerOffset: 20, edgeRatio: 0.75)
+                .rotation(Angle(degrees: 90))
                 .foregroundColor(.green.opacity(0.4))
+//            RoundedRectangle(cornerRadius: 10)
+//                .foregroundColor(.green.opacity(0.4))
             VStack {
                 HStack {
                     Image(systemName: "pawprint")
