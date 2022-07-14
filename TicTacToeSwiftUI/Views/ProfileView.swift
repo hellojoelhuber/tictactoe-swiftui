@@ -1,9 +1,3 @@
-//
-//  ProfileView.swift
-//  TicTacToeSwiftUI
-//
-//  Created by Joel Huber on 6/2/22.
-//
 
 import SwiftUI
 import TicTacToeCore

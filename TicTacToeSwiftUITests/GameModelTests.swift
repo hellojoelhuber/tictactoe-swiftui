@@ -1,9 +1,3 @@
-//
-//  GameModelTests.swift
-//  TicTacToeSwiftUITests
-//
-//  Created by Joel Huber on 5/31/22.
-//
 
 import XCTest
 @testable import TicTacToeSwiftUI

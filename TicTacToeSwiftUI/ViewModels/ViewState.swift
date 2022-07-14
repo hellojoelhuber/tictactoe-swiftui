@@ -1,9 +1,3 @@
-//
-//  ViewState.swift
-//  TicTacToeSwiftUI
-//
-//  Created by Joel Huber on 6/26/22.
-//
 
 import Foundation
 

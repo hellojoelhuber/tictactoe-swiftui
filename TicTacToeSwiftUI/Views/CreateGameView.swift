@@ -1,9 +1,3 @@
-//
-//  CreateGameView.swift
-//  TicTacToeSwiftUI
-//
-//  Created by Joel Huber on 6/1/22.
-//
 
 import SwiftUI
 

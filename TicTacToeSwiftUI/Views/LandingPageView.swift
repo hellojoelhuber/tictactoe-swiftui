@@ -1,9 +1,3 @@
-//
-//  LandingPageView.swift
-//  TicTacToeSwiftUI
-//
-//  Created by Joel Huber on 6/27/22.
-//
 
 import SwiftUI
 import TrapezoidShapes
