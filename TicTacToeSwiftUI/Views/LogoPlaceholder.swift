@@ -11,11 +11,17 @@ import TrapezoidShapes
 struct LogoPlaceholder: View {
     var body: some View {
         ZStack {
-            RoundedTrapezoid(cornerOffset: 20, edgeRatio: 0.75)
-                .rotation(Angle(degrees: 90))
-                .foregroundColor(.green.opacity(0.4))
-//            RoundedRectangle(cornerRadius: 10)
-//                .foregroundColor(.green.opacity(0.4))
+            RoundedTrapezoid(cornerRadius: 20,
+                             edgeRatio: 0.75,
+                             flexibleEdge: .right)
+                .fill(.green)
+                .brightness(0.35)
+                .shadow(radius: 10, x: 10, y: 10)
+            RoundedTrapezoid(cornerRadius: 20,
+                             edgeRatio: 0.75,
+                             flexibleEdge: .right)
+                .strokeBorder()
+
             VStack {
                 HStack {
                     Image(systemName: "pawprint")

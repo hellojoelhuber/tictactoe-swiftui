@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import TrapezoidShapes
 
 struct LandingPageView: View {
     @EnvironmentObject var gameVM: GameViewModel
@@ -35,7 +36,8 @@ struct LandingPageView: View {
         } label: {
             SimpleButton(buttonLabel: "Active Games",
                          backgroundColor: DrawingConstants.activeGamesButtonColor,
-                         icon: Page.activeGames.iconName)
+                         icon: Page.activeGames.iconName,
+                         leftTrapezoid: false)
         }
     }
     
@@ -45,7 +47,8 @@ struct LandingPageView: View {
         } label: {
             SimpleButton(buttonLabel: "Search for Games",
                          backgroundColor: DrawingConstants.searchGamesButtonColor,
-                         icon: Page.searchGames.iconName)
+                         icon: Page.searchGames.iconName,
+                         leftTrapezoid: true)
         }
     }
     
@@ -55,7 +58,8 @@ struct LandingPageView: View {
         } label: {
             SimpleButton(buttonLabel: "Play Local Game",
                          backgroundColor: DrawingConstants.localGamesButtonColor,
-                         icon: Page.localGames.iconName)
+                         icon: Page.localGames.iconName,
+                         leftTrapezoid: true)
         }
     }
     
@@ -65,7 +69,8 @@ struct LandingPageView: View {
         } label: {
             SimpleButton(buttonLabel: "My Profile",
                          backgroundColor: DrawingConstants.profileButtonColor,
-                         icon: Page.profile.iconName)
+                         icon: Page.profile.iconName,
+                         leftTrapezoid: false)
         }
     }
     
@@ -73,13 +78,21 @@ struct LandingPageView: View {
         let buttonLabel: String
         let backgroundColor: Color
         let icon: String
+        let leftTrapezoid: Bool
         
         var body: some View {
             ZStack {
-                
-                RoundedRectangle(cornerRadius: DrawingConstants.buttonCornerRadius)
-                    .foregroundColor(backgroundColor.opacity(0.5))
-                RoundedRectangle(cornerRadius: DrawingConstants.buttonCornerRadius)
+                RoundedTrapezoid(cornerRadius: DrawingConstants.buttonCornerRadius,
+                                 edgeRatio: DrawingConstants.buttonEdgeRatio,
+                                 flexibleEdge: leftTrapezoid ? .left : .right)
+                    .fill(backgroundColor)
+                    .brightness(DrawingConstants.buttonBrightness)
+                    .shadow(radius: DrawingConstants.shadowRadius,
+                            x: DrawingConstants.shadowOffsetX,
+                            y: DrawingConstants.shadowOffsetY)
+                RoundedTrapezoid(cornerRadius: DrawingConstants.buttonCornerRadius,
+                                 edgeRatio: DrawingConstants.buttonEdgeRatio,
+                                 flexibleEdge: leftTrapezoid ? .left : .right)
                     .stroke(style: StrokeStyle(lineWidth: DrawingConstants.buttonBorderWidth))
                 VStack {
                     Image(systemName: icon)
@@ -96,13 +109,19 @@ struct LandingPageView: View {
     }
     
     private struct DrawingConstants {
-        static let buttonCornerRadius: CGFloat = 10
-        static let buttonBorderWidth: CGFloat = 2
+        static let buttonCornerRadius: Double = 10
+        static let buttonBorderWidth: Double = 2
         static let buttonAspectRatio = 1.5
-        static let buttonPadding: CGFloat = 5
+        static let buttonPadding: Double = 5
+        static let buttonEdgeRatio: Double = 0.8
         
-        static let buttonContentsPadding: CGFloat = 10
+        static let buttonContentsPadding: Double = 10
         static let buttonFontColor = Color.black
+        static let buttonBrightness: Double = 0.35
+        
+        static let shadowRadius: Double = 10
+        static let shadowOffsetX: Double = 10
+        static let shadowOffsetY: Double = 10
         
         static let activeGamesButtonColor = Color.blue
         static let searchGamesButtonColor = Color.red
